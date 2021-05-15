@@ -1,0 +1,115 @@
+
+#.write a program in java to find the given number is prime or not.
+
+import java.util.*;
+  
+  public class Main{
+  
+  public static void main(String[] args) {
+      Scanner scn = new Scanner(System.in);
+  
+       int t=scn.nextInt();
+       
+       for(int i=0;i<t;i++)
+       {
+           int n=scn.nextInt();
+           int c=0;
+           for(int j=2;j*j<=n;j++)
+           {
+               if(i%j==0)
+               {
+                   c++;
+                   break;
+               }
+           }
+           if(c==0)
+           {
+               System.out.println("prime");
+           }
+           else
+           {
+               System.out.println("not prime");
+           }
+       }
+  
+   }
+  }
+
+
+
+
+
+
+
+#.write a program in java to find the prime number upto N.
+
+import java.util.*;
+
+public class Main{
+    public static void main(String[] args) {
+        Scanner scn=new Scanner(System.in);
+        int low=scn.nextInt();
+        int high=scn.nextInt();
+        
+        for(int i=low;i<=high;i++)
+        {
+            int c=0;
+            
+            for(int j=2;j*j<=i;j++)
+            {
+                if(i%j==0)
+                {
+                 c++;
+                 break;
+                }
+            }
+            if(c==0)
+            {
+             System.out.println(i);
+            }
+        }
+    }
+}
+
+#.write aprogram in java to find the fibbinic number uoto N.
+
+import java.util.*;
+  
+  public class Main{
+  
+  public static void main(String[] args) {
+      Scanner scn=new Scanner(System.in);
+      int n=scn.nextInt();
+      int a=0;
+      int b=1;
+      int c;
+      for(int i=0;i<n;i++)
+      {
+          System.out.println(a);
+          c=a+b;
+          a=b;
+          b=c;
+      }
+   }
+  }
+
+#.Write a program in java to find the number of digits in the number.
+
+import java.util.*;
+  
+  public class Main{
+  
+  public static void main(String[] args) {
+    Scanner scn=new Scanner(System.in);
+    int n=scn.nextInt();
+    int c=0;
+    int temp=n;
+    while(temp!=0)
+    {
+        temp=temp/10;
+        c++;
+        
+    }
+    System.out.println(c);
+   }
+  }
