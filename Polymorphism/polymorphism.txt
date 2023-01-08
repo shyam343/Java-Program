@@ -1,0 +1,44 @@
+ # Polymorphism#
+def:- having many form.(Polymorphism means "many forms", and it occurs when we have many classes that are related to each other by inheritance.)
+eg shape(round,triangle,sphare)
+      water form(solid,liquid,gas)
+It is two type.
+1.Compile Time Polymorphism ->achive through (Method Overloading)
+2.Runtime Polymorphism  ->achive through (Method Overridding)
+
+1.Compile Time Polymorphism ->achive through (Method Overloading)
+ -> In same class having same name of method.
+->with different argument
+     a) Number of Argument.
+     b) Sequence of argument.
+     c)Type of argument.
+Program:
+
+import java.io.*;
+import java.util.*;
+
+class Main{
+    
+    void A(String str)
+    {
+        System.out.println("a method");
+    }
+    void A(int a){
+        System.out.println("b method");
+    }
+    public static void main(String[] args)
+    {
+        Main t=new Main();
+        t.A(10);
+        t.A("shyam");
+    }
+}
+
+##
+2.Runtime Polymorphism  ->achive through (Method Overridding)
+
+-> In different class having same name of method.
+->with different argument
+     a) Number of Argument.
+     b) Sequence of argument.
+     c)Type of argument.
