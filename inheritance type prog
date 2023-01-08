@@ -1,0 +1,140 @@
+ #Single Inheritance#
+
+import java.io.*;
+import java.util.*;
+
+class B 
+{
+  void B()
+  {
+    System.out.println("B class");
+
+  }
+}
+class Main extends B {
+    void A()
+    {
+        System.out.println("A class");
+    }
+  public static void main (String[] args) {
+    B obj1 = new B();
+    obj1.B();
+    System.out.println("A -----------------");
+    Main obj2=new Main();
+    obj2.A();
+    obj2.B();
+    
+  }
+}
+
+output:-
+
+B class
+A -----------------
+A class
+B class
+
+# #multi level inheritance##
+
+import java.io.*;
+import java.util.*;
+class A {
+  void A() {
+    System.out.println("A class");
+  }
+}
+class B extends A
+{
+  void B()
+  {
+    System.out.println("B class");
+
+  }
+}
+class Main extends B {
+  void C()
+  {
+    System.out.println("C class");
+  }
+
+  public static void main (String[] args) {
+    A obj1 = new A();
+    obj1.A();
+   // obj1.B();
+   // obj1.C();
+   
+    System.out.println("b -----------------");
+    B obj2 = new B();
+    obj2.A();
+    obj2.B();
+    //obj2.C();
+    
+    System.out.println("c ----------------");
+    Main obj3 = new Main();
+    obj3.C();
+    obj3.B();
+    obj3.A();
+  }
+}
+
+output:-
+
+A class
+b -----------------
+A class
+B class
+c ----------------
+C class
+B class
+A class
+
+## Hierarical inheritance ##
+import java.io.*;
+import java.util.*;
+class A {
+  void A() {
+    System.out.println("A class");
+  }
+}
+class B extends A
+{
+  void B()
+  {
+    System.out.println("B class");
+
+  }
+}
+class Main extends A {
+  void C()
+  {
+    System.out.println("C class");
+  }
+
+  public static void main (String[] args) {
+    A obj1 = new A();
+    obj1.A();
+   // obj1.B();
+   // obj1.C();
+   
+    System.out.println("b -----------------");
+    B obj2 = new B();
+    obj2.A();
+    obj2.B();
+    //obj2.C();
+    
+    System.out.println("c ----------------");
+    Main obj3 = new Main();
+    obj3.C();
+   // obj3.B();
+    obj3.A();
+  }
+}
+
+output:-
+A class
+b -----------------
+A class
+B class
+c ----------------
+C class
+A class
