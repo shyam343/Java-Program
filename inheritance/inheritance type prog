@@ -1,4 +1,10 @@
- #Single Inheritance#
+Note:-
+1.  Object class is the parent class in java.
+2.  Constructor is not inherit in other class.
+3.  Private is not inherit in other class.
+
+
+#Single Inheritance#
 
 import java.io.*;
 import java.util.*;
